@@ -1,7 +1,7 @@
-local Boo = {}
+local Boo1 = {}
 
-function Boo.CreateWindow(libName, logoId)
-	local BooLib = Instance.new("ScreenGui")
+function Boo1.CreateWindow(libName, logoId)
+	local BoooLib = Instance.new("ScreenGui")
 	local shadow = Instance.new("ImageLabel")
 	local MainFrame = Instance.new("Frame")
 	local sideHeading = Instance.new("Frame")
@@ -48,10 +48,10 @@ function Boo.CreateWindow(libName, logoId)
 	game:GetService("UserInputService").InputBegan:connect(function(current, ok) 
 		if not ok then 
 			if current.KeyCode.Name == oldKey then 
-				if BooLib.Enabled == true then
-					BooLib.Enabled = false
+				if BoooLib.Enabled == true then
+					BoooLib.Enabled = false
 				else
-					BooLib.Enabled = true
+					BoooLib.Enabled = true
 				end
 			end
 		end
@@ -106,13 +106,13 @@ function Boo.CreateWindow(libName, logoId)
 	pageFolder.Parent = framesAll
 
 	--
-	libName = libName or "BooLib"
+	libName = libName or "BoooLib"
 	logoId = logoId or ""
 	--
 
-	BooLib.Name = "BooLib"..libName
-	BooLib.Parent = game.CoreGui
-	BooLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	BoooLib.Name = "BoooLib"..libName
+	BoooLib.Parent = game.CoreGui
+	BoooLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = shadow
@@ -143,7 +143,7 @@ function Boo.CreateWindow(libName, logoId)
 	hubLogo.Position = UDim2.new(0.0567928664, 0, 0.0243411884, 0)
 	hubLogo.Size = UDim2.new(0, 30, 0, 30)
 	hubLogo.ZIndex = 2
-	hubLogo.Image = "rbxassetid://"..logoId
+	hubLogo.Image = "rbxassetid://9703687018"
 
 	MainCorner_2.CornerRadius = UDim.new(0, 999)
 	MainCorner_2.Name = "MainCorner"
@@ -221,7 +221,7 @@ function Boo.CreateWindow(libName, logoId)
 	framesAll.ZIndex = 2
 
 	shadow.Name = "shadow"
-	shadow.Parent = BooLib
+	shadow.Parent = BoooLib
 	shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	shadow.BackgroundTransparency = 1.000
 	shadow.Position = UDim2.new(0.319562584, 0, 0.168689325, 0)
